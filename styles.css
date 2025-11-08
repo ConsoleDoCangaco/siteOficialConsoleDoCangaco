@@ -1,6 +1,6 @@
 :root {
-  --primary: #2260ff;
-  --primary-dark: #153c94;
+  --primary: #d89755;
+  --primary-dark: #e8cf96;
   --secondary: #f7f8fa;
   --background: #f4f7fb;
   --accent: #ffb111;
@@ -8,7 +8,7 @@
   --white: #fff;
   --radius: 1.2rem;
   --duration: 0.4s;
-  --shadow: 0 2px 16px 0 rgba(34, 96, 255, 0.13);
+  --shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.652);
 }
 
 html { scroll-behavior: smooth; }
