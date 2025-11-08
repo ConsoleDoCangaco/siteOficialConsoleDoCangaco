@@ -6,6 +6,32 @@ menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
 });
 
+// Theme toggle (sun / moon) - persiste em localStorage and respects system preference
+const themeToggleBtn = document.getElementById('theme-toggle');
+function getPreferredTheme() {
+  const stored = localStorage.getItem('theme');
+  if (stored === 'light' || stored === 'dark') return stored;
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
+  localStorage.setItem('theme', theme);
+  if (themeToggleBtn) themeToggleBtn.setAttribute('aria-pressed', theme === 'dark');
+}
+
+// initialize theme
+const initialTheme = getPreferredTheme();
+applyTheme(initialTheme);
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+  });
+}
+
 // Close nav on link click (mobile)
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => { navLinks.classList.remove('open'); });
