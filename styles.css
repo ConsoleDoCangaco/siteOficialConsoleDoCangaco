@@ -74,7 +74,7 @@ body {
 
 /* Hero */
 .hero {
-  background: radial-gradient(ellipse at top left, #2260ff32, transparent 75%), var(--white);
+  background: radial-gradient(ellipse at top left, #ffe19de2, transparent 75%), var(--white);
   padding: 5em 0 3em 0;
   text-align: center;
 }
