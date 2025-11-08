@@ -337,22 +337,7 @@ section {
 }
 
 /* Eventos */
-.eventos-lista {
-  padding: 0;
-  list-style: none;
-  font-size: 1.1em;
-}
-.eventos-lista li {
-  margin: 0.7em 0;
-  padding-left: 1.2em;
-  position: relative;
-}
-.eventos-lista li::before {
-  content: "📅";
-  position: absolute;
-  left: 0;
-  top: 0.18em;
-}
+/* eventos-lista removed (not present in current markup). Reintroduce if events list is added. */
 
 /* FAQ */
 .faq-list {
