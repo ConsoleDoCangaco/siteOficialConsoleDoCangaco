@@ -308,6 +308,12 @@ section {
 .anim-fade-in {
   opacity: 0;
   animation: fade-in-up 0.9s var(--duration) forwards;
+  /* keep paused until IntersectionObserver triggers it */
+  animation-play-state: paused;
+}
+
+.anim-fade-in.in-view {
+  animation-play-state: running;
 }
 
 @media (max-width: 900px) {
