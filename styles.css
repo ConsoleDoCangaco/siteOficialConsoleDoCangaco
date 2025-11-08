@@ -111,6 +111,30 @@ body {
   color: #4d5761;
   margin: 1.2em 0 2em 0;
 }
+
+/* Hero logo (grande) */
+.hero-logo { text-align: center; margin-bottom: 1rem; }
+.hero-logo-img {
+  width: 140px;
+  height: auto;
+  display: inline-block;
+  animation: logo-bounce 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes logo-bounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-2deg); }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-img { animation: none; }
+}
+
+@media (max-width: 700px) {
+  .hero-logo-img { width: 100px; }
+}
 .btn-primary {
   background: var(--primary);
   color: var(--white);
